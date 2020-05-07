@@ -1,7 +1,4 @@
 <script>
-    import {createEventDispatcher} from 'svelte'
-
-    const dispatch = createEventDispatcher()
     export let menuList
     export let activeMenu;
 </script>
@@ -9,7 +6,7 @@
 <div class="tab">
     <ul>
         {#each menuList as list}
-            <li class:active={list === activeMenu} on:click={() => dispatch('changeMenu', list)}>{list}</li>
+            <li class:active={list === activeMenu}>{list}</li>
         {/each}
     </ul>
 </div>

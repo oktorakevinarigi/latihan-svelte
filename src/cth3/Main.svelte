@@ -13,20 +13,19 @@
     ]
 
     const changeMenu = (e) => {
-        activeMenu = e.detail
+    
     }
     const handleAdd = (e) =>{
-        lists = [...lists, e.detail]
-        activeMenu = 'List'
+        
     }
     const handleDelete = (e) =>{
-        lists = lists.filter(x => x.id !== e.detail)
+        
     }
 
 </script>
 
 <div>
-    <Tab {menuList} {activeMenu} on:changeMenu={changeMenu} />
+    <Tab menuList={menuList} activeMenu={activeMenu} on:changeMenu={changeMenu} />
     {#if activeMenu === 'List'}
 		<List {lists} on:handleDelete={handleDelete} />
 	{:else if activeMenu === 'Form'}

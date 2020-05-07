@@ -12,7 +12,6 @@
     <Router url="{url}">
     <Header />
       <div>
-        <!-- <Route path="blog/:id" component="{BlogPost}" /> -->
         <Route path="/"><Home /></Route>
         <Route path="list" component="{List}" />
         <Route path="form" component="{Form}" />

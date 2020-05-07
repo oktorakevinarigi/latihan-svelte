@@ -3,32 +3,19 @@ import {
     Button, Card, CardBody, CardHeader,
     CardTitle, FormGroup, Label, Input, CardText
 } from "sveltestrap";
-import { onMount, beforeUpdate, afterUpdate } from 'svelte';
+import { onMount } from 'svelte';
 import ListData from '../stores/ListData.js';
-// https://jsonplaceholder.typicode.com/posts
 
-onMount(async() => {
-    console.log("onMount")
-    const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-    let pars = await res.json();
+let Data = []
 
-    ListData.update(x => x = pars)
-});
+onMount(() => {
 
-beforeUpdate(() => {
-    console.log("beforeUpdate")
-})
-
-afterUpdate(() =>{
-    console.log("afterUpdate")
 })
 
 </script>
 
-
-
 <div>
-    {#each $ListData as list}
+    {#each Data as list}
         <Card class="mb-3">
         <CardHeader>
             <CardTitle>{list.title}</CardTitle>
@@ -39,6 +26,8 @@ afterUpdate(() =>{
             </CardText>
         </CardBody>
         </Card>
+    {:else}
+        <p>Data Kosong</p>
     {/each}
 </div>
 

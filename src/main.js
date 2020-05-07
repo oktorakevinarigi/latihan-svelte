@@ -1,10 +1,10 @@
-import App from './App.svelte';
-// import Form from './cth1/Form.svelte'
-// import Form from './cth2/Form.svelte'
-// import Cth3 from './cth3/Main.svelte'
-import Main from './routes/Main.svelte'
+// import App from './App.svelte';
+import App from './cth1/Form.svelte'
+// import App from './cth2/Form.svelte'
+// import App from './cth3/Main.svelte'
+// import App from './routes/Main.svelte'
 
-const app = new Main({
+const app = new App({
 	target: document.body,
 	props: {
 		name: 'world'
