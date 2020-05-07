@@ -10,6 +10,7 @@ onMount(async() => {
     let pars = await res.json();
     lists = pars.data
 });
+
 </script>
 
 <Container>

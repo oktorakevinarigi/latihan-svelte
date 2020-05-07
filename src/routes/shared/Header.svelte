@@ -19,10 +19,10 @@
         <NavLink><Link to="/">Home</Link></NavLink>
       </NavItem>
       <NavItem>
-        <NavLink><Link to="/about">About</Link></NavLink>
+        <NavLink><Link to="/list">List</Link></NavLink>
       </NavItem>
       <NavItem>
-        <NavLink><Link to="/blog">Blog</Link></NavLink>
+        <NavLink><Link to="/form">Form</Link></NavLink>
       </NavItem>
   </Nav>
 </Navbar>
